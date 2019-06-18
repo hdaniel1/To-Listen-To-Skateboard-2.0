@@ -6,26 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'open-uri'
-
-# require 'rspotify'
-
-# def get_albums(search_term)
-#     RSpotify.authenticate(ENV["CLIENT_KEY"], ENV["SECRET_KEY"])
-#     RSpotify::Album.search(search_term, limit: 5)
-# end
-
-# def seed_db(album_list, genre)
-#     album_list.each do |album|
-#         byebug
-#         end
-#     end
-
-# indie = get_albums("indie")
-# seed_db(indie, "indie")
-
 #create a user
-User.find_or_create_by(username:"dhallada", profile_img:"https://i.imgur.com/cAvJuM0.jpg")
+User.find_or_ create_by(username:"dhallada", profile_img:"https://i.imgur.com/cAvJuM0.jpg")
 
 #create albums
 

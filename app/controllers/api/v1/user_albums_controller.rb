@@ -4,8 +4,14 @@ class Api::V1::UserAlbumsController < ApplicationController
     end
 
     def create
-        render json: UserAlbum.find_or_create_by(user_album_params)
-    end
+        if !!UserAlbum.find_by(user_album_params)
+            render json:{
+                message:"Already added"
+        } 
+        else
+            render json: UserAlbum.find_or_create_by(user_album_params)  
+        end  
+     end
 
     def show
         render json: UserAlbum.find(params[:id])
